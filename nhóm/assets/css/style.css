@@ -25,7 +25,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000003;
+    background: #041d31;
 }
 .box{
     position: relative;
@@ -37,7 +37,7 @@ body{
     width: 60%;
     height: 60%;
     position: absolute;
-    background-image: url("/assets/image/Map\ có\ tên.png");
+    background-image: url("./assets/image/Map\ có\ tên.png");
     background-size: cover;
     transition: 1s;
     border-radius: 10px;
@@ -45,6 +45,7 @@ body{
 }
 
 .map{
+    margin-top: 100px;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -65,7 +66,7 @@ body{
     position: absolute;
     width: 20rem ;
     height: 15rem;
-    background-image: url(/assets/image/ntmk.png);
+    background-image: url(../image/ntmk.png);
     background-size:100% ;
     background-repeat: no-repeat;
     transition: 1s;
@@ -79,8 +80,7 @@ body{
     position: absolute;
     width: 20rem ;
     height: 15rem;
-    background-image: url(/assets/image/Không\ Có\ Tiêu\ Đề1133_20261104095130.png);
-    background-size:100% ;
+    background-image: url(../image/Map.png);
     background-repeat: no-repeat;
     transition: 1s;
 }
@@ -93,7 +93,7 @@ body{
     position: absolute;
     width: 20rem ;
     height: 15rem;
-    background-image: url(/assets/image/ttt.png);
+    background-image: url(../image/ttt.png);
     background-size:100% ;
     background-repeat: no-repeat;
     transition: 1s;
@@ -107,7 +107,7 @@ body{
     position: absolute;
     width: 20rem ;
     height: 15rem;
-    background-image: url(/assets/image/vvt.png);
+    background-image: url(../image/vvt.png);
     background-size:100% ;
     background-repeat: no-repeat;
     transition: 1s;
@@ -121,7 +121,7 @@ body{
     position: absolute;
     width: 20rem ;
     height: 15rem;
-    background-image: url(/assets/image/ltt.png);
+    background-image: url(../image/ltt.png);
     background-size:100% ;
     background-repeat: no-repeat;
     transition: 1s;
@@ -374,6 +374,7 @@ body{
 #group{
     display: grid;
     grid-template-columns: 1fr 2fr;
+    padding: 40px;
 background-color: #fff;
 }
 #intro{
