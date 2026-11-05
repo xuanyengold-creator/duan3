@@ -1,0 +1,388 @@
+html {
+  scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color:aliceblue
+}
+.et-started-badge {
+    color: black;
+}
+
+/* Khung dẫn */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #041d31;
+}
+.box{
+    position: relative;
+    width: 16rem;
+    height: 25rem;
+    cursor: pointer;
+}
+.bg{
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    background-image: url("../image/Map.png");
+    background-size: cover;
+    transition: 1s;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px;
+}
+
+.map{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    padding: 50px;
+    padding-left: none;
+    background-color: #41cffa;
+    padding-top: 200px;
+    
+    
+}
+.box:hover .bg{
+    transform: perspective(20px) rotateX(2deg) translateY(-50px);
+}
+
+.bird{
+    position: absolute;
+    width: 20rem ;
+    height: 15rem;
+    background-image: url(../image/ntmk.png);
+    background-size:100% ;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.box:hover .bird{
+    transform: translateY(-160px) translateX(-10px);
+}
+
+.bird1{
+    position: absolute;
+    width: 20rem ;
+    height: 15rem;
+    background-image: url(../image/tcc.png);
+    background-size:100% ;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.box:hover .bird1{
+    transform: translateY(-160px) translateX(-10px);
+}
+
+.bird2{
+    position: absolute;
+    width: 20rem ;
+    height: 15rem;
+    background-image: url(../image/ttt.png);
+    background-size:100% ;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.box:hover .bird2{
+    transform: translateY(-160px) translateX(-10px);
+}
+
+.bird3{
+    position: absolute;
+    width: 20rem ;
+    height: 15rem;
+    background-image: url(../image/vvt.png);
+    background-size:100% ;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.box:hover .bird3{
+    transform: translateY(-160px) translateX(-10px);
+}
+
+.bird4{
+    position: absolute;
+    width: 20rem ;
+    height: 15rem;
+    background-image: url(../image/ltt.png);
+    background-size:100% ;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.box:hover .bird4{
+    transform: translateY(-160px) translateX(-10px);
+}
+
+.box a{
+    color: #040453;
+    background-color: rgb(141, 217, 236);
+}
+
+
+
+/*thành viên */
+/* Định dạng cơ bản kiểu Sci-Fi màn hình game */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Khung màn hình game tỷ lệ chuẩn */
+.game-container {
+    margin-top: 100px;
+    margin: 20px;
+    padding: 30px;
+    
+    position: relative;
+    background: radial-gradient(circle at center, #ca70a5 0%, #f1f2f3 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Tiêu đề góc trên */
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+.menu-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.party-info {
+    font-size: 13px;
+    color: #4fa8ff;
+    font-weight: bold;
+}
+
+/* Bố cục chia đều 3 phần nằm ngang nhau */
+.content-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    gap: 15px;
+    flex-grow: 1;
+    align-items: stretch;
+    padding: 30px 0;
+}
+
+/* CỘT 1: LƯỚI CHỨA CHÍNH XÁC 7 Ô */
+.character-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    align-content: center;
+}
+
+.grid-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    filter: grayscale(30%);
+}
+
+.grid-item:hover, .grid-item.active {
+    border-color: #4fa8ff;
+    box-shadow: 0 0 20px rgba(79, 168, 255, 0.4);
+    background: rgba(79, 168, 255, 0.05);
+}
+
+.grid-item:hover img, .grid-item.active img {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+/* CỘT 2: KHU VỰC HIỂN THỊ MÔ HÌNH Ở GIỮA */
+.character-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.avatar-stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+#preview-img {
+    max-height: 350px;
+    width: auto;
+    object-fit: contain;
+    z-index: 2;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.6));
+    animation: floating 3s ease-in-out infinite; /* Hiệu ứng nhân vật bay nhấp nhô nhẹ */
+}
+
+/* Bệ ánh sáng dưới chân mô hình */
+.stage-glow {
+    position: absolute;
+    bottom: 20px;
+    width: 180px;
+    height: 35px;
+    background: radial-gradient(ellipse at center, rgba(79, 168, 255, 0.3) 0%, rgba(79, 168, 255, 0) 70%);
+    border: 2px solid rgba(79, 168, 255, 0.5);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(79, 168, 255, 0.4);
+    transform: rotateX(60deg);
+    z-index: 1;
+}
+
+/* Hiệu ứng nhấp nhô cho mô hình thêm sinh động */
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* CỘT 3: KHỐI DIV GHI NHIỆM VỤ (QUEST LOG) */
+.quest-container {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(79, 168, 255, 0.3);
+    border-radius: 6px;
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    box-shadow: inset 0 0 20px rgba(6, 86, 167, 0.05);
+    justify-content: space-between;
+    height: 70vh;
+}
+
+.quest-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(26, 113, 201, 0.1);
+    border-bottom: 1px solid rgba(20, 75, 129, 0.3);
+}
+
+.quest-header h2 {
+    font-size: 10px;
+    color: #4fa8ff;
+    font-weight: bold;
+}
+
+.quest-status {
+    background: #ff9800;
+    color: #000;
+    font-size: 15px;
+    padding: 2px 8px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.quest-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.quest-title {
+    font-size: 15px;
+    color: #fff;
+}
+
+.quest-description {
+    font-size: 10px;
+    color: #8a99ad;
+    line-height: 1.5;
+}
+
+.quest-objectives h4 {
+    font-size: 10px;
+    color: #4fa8ff;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.quest-objectives ul {
+    list-style: none;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.quest-objectives li.completed { color: #4caf50; }
+.quest-objectives li.pending { color: #e2e8f0; }
+
+.quest-footer {
+    padding: 15px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.reward-text {
+    font-size: 13px;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+#group{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 40px;
+background-color: #fff;
+}
+#intro{
+    background-color: #dcf7e5;
+    padding: 30px;
+    color: #000003;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
